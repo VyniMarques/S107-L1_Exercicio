@@ -1,3 +1,4 @@
+[![Node.js CI](https://github.com/VyniMarques/S107-L1_Exercicio/actions/workflows/node.js.yml/badge.svg)](https://github.com/VyniMarques/S107-L1_Exercicio/actions/workflows/node.js.yml)
 # S107-L1 - DevOps
 ## Exercício prático
 
