@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      EMAIL_LIST: caio.lima@ges.inatel.br
+      EMAIL_LIST: [caio.lima@ges.inatel.br, vinicius.ximenes@ges.inatel.br]
 
     steps:
     - name: Executa comandos
