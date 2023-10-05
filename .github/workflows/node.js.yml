@@ -27,7 +27,7 @@ jobs:
         npm test
         npm install mocha@10.2.0
         mkdir testArtefact
-        npx mocha > ./testArtefact/test.txt
+        npx mocha > .\testArtefact\test.txt
 
     - name: Archive test artifacts
       uses: actions/upload-artifact@v3
