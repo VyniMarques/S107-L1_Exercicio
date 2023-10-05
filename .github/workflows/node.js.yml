@@ -25,8 +25,9 @@ jobs:
     - run: | 
         npm ci
         npm test
+        npm install mocha@10.2.0
         mkdir testArtefact
-        mocha > .\testArtefact\test.txt
+        npx mocha > ./testArtefact/test.txt
 
     - name: Archive test artifacts
       uses: actions/upload-artifact@v3
@@ -55,7 +56,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      EMAIL_LIST: caio.lima@ges.inatel.br, vinicius.ximenes@ges.inatel.br
+      EMAIL_LIST:
 
     steps:
     - name: Executa comandos
