@@ -26,7 +26,6 @@ jobs:
     - run: | 
         npm ci
         npm test
-        npm install mocha@10.2.0
         mkdir testArtefact
         npx mocha > .\testArtefact\test.txt
 
