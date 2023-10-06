@@ -22,12 +22,13 @@ jobs:
       with:
         node-version: 16.x
         cache: 'npm'
+        # corrigir npm install mocha@10.2.0
     - run: | 
         npm ci
         npm test
         npm install mocha@10.2.0
         mkdir testArtefact
-        npx mocha > .\testArtefact\test.txt
+        npx mocha > .\testArtefact\test.html
 
     - name: Archive test artifacts
       uses: actions/upload-artifact@v3
