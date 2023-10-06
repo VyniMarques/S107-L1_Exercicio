@@ -28,13 +28,13 @@ jobs:
         npm test
         npm install mocha@10.2.0
         mkdir testArtefact
-        npx mocha > .\testArtefact\test.html
+        npx mocha > .\testArtefact\test.txt
 
     - name: Archive test artifacts
       uses: actions/upload-artifact@v3
       with:
         name: test
-        path: .\testArtefact\test.html
+        path: .\testArtefact\test.txt
 
 
   build:
@@ -57,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      EMAIL_LIST:
+      EMAIL_LIST: caio.lima@ges.inatel.br, vinicius.ximenis@ges.inatel.br
 
     steps:
     - name: Executa comandos
