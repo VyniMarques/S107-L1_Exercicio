@@ -10,6 +10,15 @@ chai.use(chaiHttp);
 //--------------------------------------------------------------------------------------------
 describe('Teste Adicionar', ()=> {
 
+  it('Verificar se a pagina esta funcionando', (done) => {
+    chai.request(app)
+      .post('/salvar-tarefa')
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        done();
+      });
+    });
+
   it('Teste para adicionar tarefa a fazer', (done) =>{
       chai.request(app)
           .post('/salvar-tarefa')
@@ -19,8 +28,7 @@ describe('Teste Adicionar', ()=> {
           expect(res.text).to.include('Arquivo salvo em');
           apagarLinha();
           done();
-          });
-          
+          });     
   })
 
   it('Teste para adicionar tarefa em andamento', (done) =>{
@@ -106,6 +114,16 @@ describe('Teste Atualizar', () => {
 });
 //--------------------------------------------------------------------------------------------
 describe('Teste Excluir', () => {
+  
+  it('Verificar se a pagina esta funcionando', (done) => {
+    chai.request(app)
+      .delete('/deletar-tarefa/Tarefa1')
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        done();
+      });
+    });
+
   it('Teste para excluir tarefa existente', (done) => {
       chai.request(app)
       .post('/salvar-tarefa')
@@ -120,8 +138,7 @@ describe('Teste Excluir', () => {
           expect(res.text).to.include('Tarefa removida com sucesso.');
         done();
         apagarLinha();
-      });
-      
+      });    
     });
   });
   it('Teste para excluir tarefa não existente', (done) => {   
