@@ -34,7 +34,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: test
-        path: .\testArtefact\test.txt
+        path: .\testArtefact\test.html
 
 
   build:
